@@ -1,0 +1,496 @@
+\clearpage
+\chapter{MARCO TEÓRICO}
+En el desarrollo de este capítulo se plantea la teoría relacionada con divisibilidad, números primos, factorización, congruencia, diferentes definiciones en teoría de números que serán fundamentales para el desarrollo de los posteriores algoritmos.
+    
+    \section{NÚMEROS ENTEROS}
+    La teoría de números se ocupa de las propiedades de los números naturales $1, 2, 3, 4, \dots$, también llamados enteros positivos. Estos números, juntos con los enteros negativos y cero, forman el conjunto de números enteros \citep{NZM1991}.
+
+    Para el desarrollo de las siguientes definiciones y algoritmos usaremos la notación de conjuntos para referirnos a los números naturales $ \mathbb{N} = {1, 2, 3,4, \dots}$ y números enteros $ \mathbb{Z} = \dots, -2, -1, 0, 1, 2, \dots$ y usualmente si se habla de “número” nos referiremos a un número entero.
+
+    \section{DIVISIBILIDAD}
+    Un entero $a$ se dice que es divisible por otro entero $b$, no $0$, si es que existe un tercer entero $c$ tal que $a=b\cdot c$
+    Si $a$ y $b$ son positivos, $c$ es necesariamente positivo. Se expresa el echo de que $a$ es divisible por $b$, o $b$ es un divisor de $a$, con $b \mid a$
+    Por lo tanto $1 \mid a$, $a \mid a$; y que $b \mid 0$ para cualquier $b$ excepto 0. También se puede decir que $b \nmid a$ para expresar lo contrario a $b \mid a$.
+    Otras propiedades que podemos notar son:
+    \begin{itemize}
+        \item{$b \mid a \land c \mid b \implies c \mid a$}
+        \item{$b \mid a \implies b\cdot c \mid a\cdot c$}
+        \item{Si $c\not = 0$ y $c \mid a \land c \mid b \implies c\mid m\cdot a + n\cdot b$ para todos los enteros $m$ y $n$ }
+    \end{itemize}
+    \[
+        b \mid a \land c \mid b \implies c \mid a
+    \]
+
+    \[
+        b \mid a \implies b\cdot c \mid a\cdot c
+    \]
+    
+    Si $c\not = 0$ y $c \mid a \land c \mid b \implies c\mid m\cdot a + n\cdot b$ para todos los enteros $m$ y $n$ \citep{HW1975}.
+
+    Definimos “$n \mod m$” como el resto cuando el entero $n$ es divido por el entero positivo $m$. Siempre se tiene que $0 \leq n \mod m < m$.
+    Si al menos uno de los enteros $n$, $m$ no es cero, se define el máximo común divisor (\textit{greatest common divisor}) de $n$ y $m$, como $gcd(m,n)$, al mayor entero que divida a ambos $m$ y $n$. Esta claro que $gcd(m,n) \geq 1$ y que $gcd(m,n) = gcd(n,m)$. Se dice que los enteros $m$, $n$ son primos relativos o coprimos si $gcd(m,n) = 1$ \citep{Wagstaff2013}.
+
+    El siguiente enunciado es util para los algoritmos que usaremos más adelante, si $m$ es un entero positivo y $n$, $q$, $r$ son enteros tal que $n = m\cdot q + r$, entonces $gcd(n,m) = gcd(m,r)$ y su demostración es la siguiente:
+
+    Si $a = gcd(n,m)$ y $b=gcd(m,r)$. Dado que $a$ divide a ambos $n$ y $m$, también debe dividir a $r =n-m\cdot q$. Esto muestra que $a$ es un común divisor de $m$ y $r$, entonces este debe ser $\leq b$, su máximo común divisor. Igualmente, dado que $b$ divide a ambos $m$ y $r$, este debe dividir a $n$, entonces $b \leq a = gcd(n,m)$. Por lo tanto $a = b$.
+
+    \section{NOTACIÓN BIG-O}
+    Para las funciones dadas $g(n)$, denotaremos por $O(g(n))$ (pronunciado como ''big-oh de g de n'' o solamente ''oh de g de n'') al conjunto de funciones
+    \[
+        O(g(n)) = \{ f(n):\text{si existe una constante positiva }c \text{ y }\text{ tal que } 0 \leq f(n) \leq c\cdot g(n)\}.
+    \]
+    Usaremos la notación Big O para dar un limite superior a una función, dentro de un factor constante \citep{Cormen2009}
+
+    La notación Big O es una forma de describir el comportamiento de un algoritmo en términos de la cantidad de tiempo o espacio que necesita a medida que el tamaño de la entrada crece. Se utiliza principalmente en el análisis de algoritmos para medir su eficiencia y compararlos. La notación Big O se centra en el crecimiento asintótico del tiempo o espacio requerido, lo que significa que describe cómo se comporta el algoritmo cuando la entrada se vuelve muy grande.
+
+    La notación Big O se centra en el peor caso, lo que proporciona una garantía sobre el comportamiento del algoritmo independientemente de las condiciones específicas de la entrada
+
+    \section{ALGORITMO DE EUCLIDES}
+    El algoritmo de Euclides es el algoritmo eficiente más antiguo que se tiene, se lo usa desde hace 2500 años, descrito por primera vez por Euclides en su obra Elementos.
+
+    Para computar $gcd(m,n)$, con $m\geq n > 0$, el algoritmo repetidamente remplaza el par $(m,n)$ por el par $(n, m \mod n)$ hasta $n=0$, en ese punto m es el máximo común divisor que se buscaba.
+    
+    \begin{algorithm}[H]
+        \SetAlgoLined
+        \textbf{Entrada:} Enteros $m >= n > 0$ \;
+         \While{$n > 0$}{
+          $r \leftarrow m$ mod $n$\;
+          $m \leftarrow n$\;
+          $n \leftarrow r$\;
+         }
+         \textbf{Salida:} $gcd(m,n)=$ el valor final de $m$.\ 
+         \caption{Algoritmo de Euclides}
+    \end{algorithm}
+
+    \section{ALGORITMO EXTENDIDO DE EUCLIDES}
+    Si $m$ y $n$ son enteros y al menos uno de ellos no es $0$, entonces existen enteros $x$ y $y$ tales que $m\cdot x + n\cdot x = gcd(m, n)$
+    Esto es importante para calcular el inverso modular $m$ y para calcular estos valores $x$, y se puede usar el algoritmo extendido de Euclides.
+    Para el siguiente algoritmo se usara tripletas de enteros, como $u = (u_{0}, u_{1}, u_{2})$, las cuales son sumadas y multiplicadas por enteros usando las reglas de suma vectorial y multiplicación escalar.
+
+    \begin{algorithm}[H]
+        \SetAlgoLined
+        \textbf{Entrada:} Enteros $m >= n > 0$ \;
+        $\vec{u} \leftarrow (m,1,0)$\;
+        $\vec{v} \leftarrow (n,0,1)$\;
+         \While{$v_0 > 0$}{
+          $q \leftarrow \lfloor u_0 / v_0 \rfloor$\;
+          $\vec{w} \leftarrow \vec{u} - q\vec{v}$\;
+          $\vec{u} \leftarrow \vec{v}$\;
+          $\vec{v} \leftarrow \vec{w}$\;
+         }
+         \textbf{Salida:} $(gcd(m,n),x,y)=$ el valor final de $\vec{u}$.\ 
+         \caption{Algoritmo extendido de Euclides}
+    \end{algorithm}
+
+    Los números $x$ y $y$ no son únicos, pero el algoritmo retorna los $x$ y $y$ con valor absoluto más pequeños. El algoritmo funciona porque cada tripleta $(a,b,c)$ satisface $a = b\cdot m + c\cdot n$ durante el algoritmo.
+
+    \section{NÚMEROS PRIMOS}
+    Un entero $p > 1$ es llamado número primo, o simplemente primo, si no existe un divisor $d$ de $p$ que satisfaga $1 < d < p$. Si un entero $a > 1$ no es un primo, es llamado un número compuesto.
+
+    \section{TEOREMA FUNDAMENTAL DE LA ARITMÉTICA}
+    Todos los enteros mayores a $1$ se pueden escribir como un producto de primos, este producto es único aparte del orden de los factores primos, y a este producto se llamara la factorización de dicho numero.
+    \[
+        n = p_{1} \times p_{2} \times p_{3} \times p_{4}
+    \]
+    Si se tiene $e$ copias de un primo $p_{i}$ en el producto, este se puede reescribir como $p_{i}^{e}$, de esta forma se obtiene la forma canónica de la factorización de un entero $n$ como:
+    \[
+        n = \prod_{i=1}^{k}p_{i}^{e_{i}}
+    \]
+    donde $p_{1}, p_{2},\dots, p_{k}$ son los distintos primos que dividen a $n$ y $e_{i} \geq 1$ es el número de veces que $p_{i}$ divide a $n$. Si $n$ es primo, solo existe un “factor”, el mismo primo. También esta permitido $n=1$ con el “producto vació” para esta forma canónica.
+    
+    \section{CONGRUENCIA}
+    Si $m$ es un entero positivo y, $a$ y $b$ son enteros, se puede decir a que $a$ es congruente con $b$ módulo $m$ y escribir $a = b(\mod m)$ si $m$ divide a $a-b$. Si $m \nmid (a-b)$ se escribe $a \not = b(\mod m)$. El entero $m$ es llamado el módulo. Cuando $a = b (\mod m)$, cada uno $a$ y $b$ son llamados residuos del otro (modulo $m$). Congruencia modulo $m$ es una relación de equivalencia, lo que significa que si $a$, $b$ y $c$ son enteros, entonces:
+    
+    \begin{itemize}
+        \item{$a = a \mod m$}
+        \item{Si $a = b \mod m$, entonces $b = a \mod m$}
+        \item{Si $a = b \mod m$ y $b = c \mod m$ entonces $a = c \mod m$}
+    \end{itemize}
+    La congruencia $a = b \mod m$ es equivalente a decir que existe un entero $k$ tal que $a = b + k\cdot m$.
+
+    % \section{NOTACIÓN BIG O}
+    \section{DIVISIONES SUCESIVAS}
+    Si se quiere encontrar los factores primos de $n$ lo que se hace es tener una lista de todos los números primos menores a $n$, luego se prueba dividir  entre cada primo $p_{i}$, si $p_{i} \mid n$ entonces se vuelve a hacer el proceso desde ese primo, pero ahora con $n/p$. Si se llega a $\sqrt{n}$ y no se ha encontrado ningún primo que divida a $n$, entonces se declara a $n$ como primo. \citep{Knuth1976}
+
+    \section{MÉTODO DE DIFERENCIA DE CUADRADOS DE FERMAT}
+    Para factorizar un número impar $n$, Fermat trato de expresar $n$ como una diferencia de dos cuadrados, $x^{2}-y^{2}$ con el par $x$, $y$ diferente de $\frac{n+1}{2}$, $\frac{n-1}{2}$. Este par entrega $x + y = n$ y $x - y =1$. Cualquier otra representación de $n$ como $x^{2}-y^{2}$ entrega una factorización no trivial $n = (x - y)\cdot (x + y)$. \citep{Fermat1894}
+
+    \begin{algorithm}[H]
+        \SetAlgoLined
+        \textbf{Entrada:} Enteros un entero compuesto impar $n$ \;
+        $x \leftarrow \sqrt{n}$\;
+        $t \leftarrow 2\cdot x + 1$\;
+        $r \leftarrow x^{2} - n $\;
+        \While{$r$ no sea una raiz cuadrada}{
+            $r \leftarrow r + t$\;
+            $t \leftarrow t + 2$\;
+        }
+        $x \leftarrow \frac{(t - 1)}{2}$\;
+        $y \leftarrow \sqrt{r}$\;
+        \textbf{Salida:} Los factores $x-y$ y $x+y$ de $n$.\ 
+        \caption{Método de diferencia de cuadrados de Fermat}
+    \end{algorithm}
+
+    \section{ALGORITMO DE FACTORIZACIÓN EN UNA LÍNEA DE HART}
+    Hart en 2012 invento una variación del Método de Factorización de Fermat, que es mucha más corto, simple de programar. El da un argumento heurístico de que factoriza  en $O(n^{\frac{1}{3+ \varepsilon}})$ pasos.
+    
+    El algoritmo de Hart comienza verificando si $n$ es una raíz. Si $n$ no es una raíz, entonces hace divisiones sucesivas, pero se detiene cuando $p$ alcanza $n^{\frac{1}{3}}$. En caso que $n$ no ha sido factorizado todavía, realiza los siguientes pasos.
+    Para $i=1, 2, 3, \dots $ prueba cualquier $\lceil\sqrt{n_{i}}\rceil^{2} \mod n$ si es raíz. Si este número es igual a $t^{2}$ entonces, es un factor de $n$. \citep{Hart2012}
+
+
+    \begin{algorithm}[H]
+        \SetAlgoLined
+        \textbf{Entrada:} Un entero positivo $n$ y un limite $L$ \;
+        $x \leftarrow \sqrt{n}$\;
+        $t \leftarrow 2\cdot x + 1$\;
+        $r \leftarrow x^{2} - n $\;
+        \For{$i=1$ hasta $L$}{
+            $s \leftarrow \lceil n_{i}\rceil$\;
+            $m \leftarrow s^{2} \mod n$\;
+            \If{$m$ es raiz}{
+                $t \leftarrow \sqrt{m}$\;
+                \text{break}
+            }
+        }
+        \textbf{Salida:} $gcd(s-t, n)$ es un factor de $n$.\ 
+        \caption{Algoritmo de factorización en una línea de Hart}
+    \end{algorithm}
+
+    Este algoritmo es especialmente rápido para enteros de la forma $(c^{a} + d)\cdot (c^{b} + e)$ donde $c$, $|d|$, $|e|$ y $|a-b|$ son enteros positivos pequeños.
+
+    \section{VARIACIÓN DE FERMAT DE LEHMERS}
+    En 1985, Lawrence propuso una manera de factorizar $n$ cuando se cree que $n=pq$ con $p \leq q$, donde la proporción $p/q$ es aproximadamente $a/b$ y $a$ y $b$ son coprimos pequeños. Cuando $a=b=1$, este algoritmo es lo mismo que el de Fermat. Asumiendo que $gcd(a\cdot b, n) = 1$.
+    
+    Suponemos primero que ambos $a$ y $b$ son impares. Escriba $x=\lceil\sqrt{a\cdot b \cdot n}\rceil$. Se prueban los enteros $(x+i)^{2} - a\cdot b \cdot n$, $i=0, 1, 2, \dots$ si son una raíz, al igual que en el algoritmo de Fermat. Se supone que $j$ es el primer valor de $i$ para el cual este número es una raíz, entonces $(x + j)^{2} - a \cdot b \cdot n = y^{2}$.
+    Entonces:
+    \[
+        a \cdot b \cdot n = (x + j)^{2} - y^{2} = (x + j +y)\cdot(x + j - y).
+    \]
+
+    Se remueve los factores de $a\cdot b$ de los dos factores del trinomio para obtener los factores de $n$. Esto es, $gcd(x + j + y, n)$ y $gcd(x + j - y, n)$ serán los factores de $n$.
+
+    Cuando una de los dos $a$ o $b$ es par y el otro es impar, los cálculos son un poco más complicados porque se debe lidiar con mitades. Lehman evito este problema multiplicando $a$, $b$ y los otros números en el algoritmo por $2$. \citep{Lawrence1895}
+    
+    \section{MÉTODO DE POLLARD RHO}
+    Este algoritmo de factorización fue inventado por John Pollard el año 1975. Este no utiliza mucho espacio de memoria, y el tiempo esperado de ejecución es proporcional a la raíz del factor primo más pequeño del número compuesto a ser factorizado. Está basada en la combinación de 2 ideas, que también son útiles para muchos otros métodos de factorización. La primera idea es la bien conocida Paradoja del cumpleaños: un grupo de al menos 23 personas seleccionadas aleatoriamente contiene 2 personas con el mismo cumpleaños en más del $50\%$ de los casos. Más generalmente: si los números son elegidos de manera aleatoria en un conjunto de $p$ números, la probabilidad de elegir el mismo número dos veces excede el $50\%$ después de $1.177\cdot\sqrt{p}$ números elegidos. El primer duplicado se espera que aparezca después de que $c\cdot\sqrt{p}$ números hayan sido seleccionados, para alguna pequeña constante $c$.
+
+    La segunda idea es la siguiente: si $p$ es algún divisor desconocido de $n$ y las variables $x$, $y$ son 2 enteros que se piensa son idénticas modulo $p$, en otras palabras $x \cong y \mod p$, entonces este puede ser verificado calculando $gcd(x - y, n)$; más importante, este cálculo puede revelar una factorización de $n$, a menos que $x$, $y$ también sean idénticos modulo $n$.
+
+    Estas ideas pueden ser combinadas en un algoritmo de factorización de la siguiente manera.
+
+    Generar una secuencia en $0, 1, 2, \dots, n-1$ seleccionando $x_{0}$ y definiendo a $x_{i+1}$ como el resto no negativo más pequeño de $x^{2}_{i} + 1 \mod n$, ya que $p$ divide a $n$ los restos no negativos más pequeños $x_{i} \mod p$ y $x-{j} \mod p$ son iguales si y solo si $x_{i}$ y $x_{j}$ son idénticos modulo $p$, ya que $x \mod p$ se comporta más o menos como un entero aleatorio en $0, 1, 2, \dots, p-1$ podemos esperar factorizar $n$ calculando $gcd(|x_{i} - x_{j}|, n)$ para $i \not = j$ después de que al menos $c\cdot\sqrt{p}$ elementos de la secuencia han sido calculados. \citep{Pollard1975}
+
+    \begin{algorithm}[H]
+        \SetAlgoLined
+        \textbf{Entrada:} Un entero positivo $n$\;
+        $b \leftarrow \text{un número aleatorio $b$ en } 1 \leq b \leq n-3$\;
+        $s \leftarrow \text{un número aleatorio $s$ en } 0 \leq s \leq n-1$\;
+        $A \leftarrow s$\;
+        $B \leftarrow s$\;
+        $\text{Defina una función } f(x) \leftarrow (x^{2} + b) \mod n$\;
+        $g \leftarrow 1$\;
+        \While{$g=1$}{
+            $A \leftarrow f(A)$\;
+            $B \leftarrow f(f(B))$\;
+            $g \leftarrow gcd(A-B, n)$\;
+        }
+        \uIf{$g < n$}{
+            $g \text{ es un factor propio de } n$\;
+        }\uElse{
+            $\text{Rendirse o intentar con nuevos valores para } s \text{ y/o } b$\;
+        }
+        \textbf{Salida:} Un factor propio $g$ de $N$.\ 
+        \caption{Método de factorización de Pollard Rho}
+    \end{algorithm}
+
+    El factor $g$ de $n$ no esta garantizado que sea primo. Uno siempre debería probar la primalidad de $g$ cuando el algoritmo finalice.
+
+    Como se puede notar, asumiendo que $f$ es una función aleatoria, la complejidad del Método de Pollard Rho es $O(\sqrt{p})$ pasos, donde $p$ es el factor más pequeño de $n$. Dado que $p \leq n$, la complejidad sera $O(n^{1/4})$
+
+    \section{MÉTODO p-1 DE POLLARD}
+    El método $p-1$ esta basado en el pequeño teorema de Fermat, que dice que $a^{p-1} \equiv 1 (\mod p)$ cuando $p$ es un primo que no divide a $a$. Por lo tanto, $a^L \equiv 1 (\mod p)$ para cualquier múltiplo $L$ de $p-1$. Si tambien $p | n$, entonces $p$ divide a $gcd(a^{L}-1, n)$, Obviamente no podemos calcular $a^{L} \mod p$ porque $p$ es un factor primo desconocido de $n$. De todas maneras, podemos computar $a^{L} \mod n$. La idea de Pollard es permitir que $L$ tenga muchos divisores de la forma $p-1$ y asi probar muchos potenciales factores primos $p$ de $n$ de una sola vez.
+
+    Si $p-1$ esta acotado en $B$, esto es, que el factor primo $p-1$ más grande de $p-1$ es $\leq B$, entonces $p-1$ dividira a $L$ si $L$ es el producto de todos los primos $\leq B$, cada uno repetido un número apropiado de veces. Si un primo $q \leq B$ divide a $p-1$, entonces $q$ no puede dividir a $p-1$ mas de $\log_{q}p-1 = (\log p/\log q)-1$ veces. Este numero es un limite superior en el ''numero apropiado de veces'' que $q$ divide a $L$. De todas formas, primes muy grandes raramente dividen grandes numeros enteros aleatorios más de una vez. Un compromiso razonable para $L$ es elegir un limite $B$, el cual nos diga cuanto trabajo se esta dispuesto a realizar en un esfuerzo de factorizar $n$, y definer $L$ como el múltiplo común más pequeño de los enteros positivos hasta $B$, Se puede mostar que $L = \prod{q^{e}}$, donde $q$ recorre todos los primos que son $\leq B$. Tupicamente, $B$ esta en los millones y $L$ is enorme. No hay necesidad de computar $L$. Dado que $q^{e}$ es formado, uno computa $a = a^{q^{e}} \mod n$. \citep{Pollard1974}
+    
+    \begin{algorithm}[H]
+        \SetAlgoLined
+        \textbf{Entrada:} Un entero positivo $n$ y un limite $B$\;
+        $\text{Encontrar todos los primos } p_1= 2, p_2=3, p_3, \dots, p_k \leq B$\;
+        $a \leftarrow 2$\;
+        \For{$i \leftarrow 1$ hasta $k$}{
+            $e \leftarrow \lfloor(\log B / \log p_{i})\rfloor$\;
+            $f \leftarrow p^{e}_{i}$\;
+            $a \leftarrow a^{f} \mod n$\;
+        }
+        $g \leftarrow gcd(a-1, N)$\;
+        \uIf{$1 < g < n$}{
+            $g \text{ divide a } n$\;
+        }\uElse{
+            Rendirse\;
+        }
+        \textbf{Salida:} Un factor propio $g$ de $N$.\ 
+        \caption{Método de factorización $p-1$ de Pollard}
+    \end{algorithm}
+
+    El algoritmo tiene una segunda parte in la cual uno elige un segundo limite $B_{2} > B$ and busca un factor $p$ de $N$ para el cual el factor primo más grande de $p-1$ es $\leq B_{2}$ y el segundo factor primo mas grade es $\leq B$. Al final de la primera parte, algoritmo x, $a$ tiene el valor $2^{L} (\mod n)$. Sean $q_{1} < q_{2} < \dots < q_{t}$ los primos entre $B$ y $B_{2}$. La idea es computar sucesivamente $w^{L\cdot q_{i}} (\mod n)$ y luego $gcd(2^{L\cdot q_{i}}-1, n)$ para $1 \leq i \leq k$. La primera potencia $2^{L \cdot q_{i}} (\mod n)$ es computada directamente como $a^{q_{i}} (\mod n)$. Las diferencias $q_{i+1} - q_{i}$ son números pares y mucho mas pequeños que $q_{i}$ por si mismos. Podemos precomputar $2^{L\cdot q_{i+1}} (\mod n)$ para $d = 2, 4, \dots$ hasta unos cuantos cientos. Para encontrar $2^{L \cdot q_{i+1}}(\mod n)$ desde $2^{L \cdot q_{i}}(\mod n)$, multiplicamos el último por $2^{L \cdot d}(\mod n)$, donde $d = q_{i+1} - q_{i}$. El costo amortizado de computar $2^{L \cdot q_{i}}(\mod n)$ para $2 \leq i \leq k$ es una simple multiplicación modulo $n$.
+
+    \section{FRACCIONES CONTINUAS}
+    Una fracción continua simple es una expresión de la forma:
+    \[
+        x = q_{0} + \frac{1}{q_{1} + \frac{1}{q_2 + \frac{1}{q_3 + \dots}}}
+    \]
+    donde denotamos por $x = [q_{0};q_{1};q_{2},q_{3},\dots]$. Los números $q_i$ deben ser enteros para todos los $i$ y también positivos cuando $i > 0$. Una fracción continua simple puede ser finita.
+
+    \[
+        x = q_{0} + \frac{1}{q_{1} + \frac{1}{q_2 + \frac{1}{q_3 + \dots + \frac{1}{q_k}}}}
+    \]
+
+    que se escribe como $[q_0, q_1, q_2, q_3, \dots, q_k]$. Los números $q_1, q_2, \dots$ son llamados los cocientes parciales de cada fracción continua.
+
+    Todos los números reales $x$ tienen una expansión continua simple que puede ser computada por el siguiente algoritmo. Separamos $x$ entre su parte entera $q_0$ y su parte fraccional, el nuevo valor de $x$. El bucle principal alterna recíprocamente con esta operación de separación, formando la secuencia de cocientes parciales $q_i$ de $x$. 
+
+    \begin{algorithm}[H]
+        \SetAlgoLined
+        \textbf{Entrada:} Un número real $x$\;
+        $i \leftarrow 0$\;
+        $q_0 \leftarrow \lfloor x \rfloor$\;
+        $x \leftarrow x - q_0$\;
+        \While{$x > 0$}{
+            $i \leftarrow i + 1$\;
+            $q_o \leftarrow \lfloor1/x\rfloor$\;
+            $x \leftarrow x - q_i$\;
+        }
+        \textbf{Salida:} $[q_0, q_1, q_2, \dots]$ es la fracción continua para $x$.\ 
+        \caption{Algoritmo de fracciones continuas}
+    \end{algorithm}
+
+    Computar una fracción continua de esta manera a través de aritmética de punto flotante requiere una gran precisión para encontrar más de unas cuantas primeras $q_i$.
+    
+    Se puede demostrar que este algoritmo termina en un número finito de pasos si y solo si $x$ es un número racional.
+
+    \section{ALGORITMO DE FACTORIZACIÓN DE FRACCIONES CONTINUAS}
+    Este algoritmo fue el primer algoritmo de factorización de números con una complejidad subexponencial.
+
+    Morrison y Brillhart repitieron el algoritmo de Lehmer y Powers y lo programaron en una computadora. La computadora hizo el tedioso cálculo de las secuencias de fracciones continuas y factorizó las $Q$. Pero, ¿cómo ''inspeccionó'' la computadora la $Q$ factorizada para formar un cuadrado? La brillante idea de Morrison y Brillhart fue utilizar la eliminación gaussiana en vectores de exponentes módulo $2$, una tarea fácil de programar, para formar cuadrados. \citep{Morrison1975}
+
+    Al igual que el algoritmo de Lehmer y Powers, el algoritmo de factorización de fracciones continuas (CFRAC) de Morrison y Brillhart usa el hecho de que, dado que los $Q_i$ son pequeños (cerca de $\sqrt{N}$), es más probable que sean más suaves que los números cercanos a $N/2$. El algoritmo usa la expansión de fracción continua para $\sqrt{N}$ para generar las secuencias ${Q_i}$ y ${A_i \mod N}$ e intenta factorizar cada $Q_i$ por Divisiones sucesivas. Una innovación de Morrison y Brillhart fue restringir los primos en la Divisiones sucesivas a aquellos por debajo de un límite $B$, llamado la base de factores. Es decir, si un $Q_i$ tiene factores primos mayores que $B$, entonces ese $Q_i$ se descarta.
+
+    El CFRAC guarda el $Q_i$, acotado en $B$, junto con el $A_i-1$ correspondiente, lo que representa la relación $A^2_{i-1} \equiv (-1)^i\cdot Q_i (\mod N)$. Cuando se han recopilado suficientes relaciones, se utiliza la eliminación gaussiana para encontrar dependencias lineales (módulo 2) entre los vectores exponenciales de las relaciones. Hay suficientes relaciones cuando hay más de ellas que primos en la base de factores. Cada dependencia lineal produce una congruencia $x^2 \equiv y^2 (\mod N)$ y una posibilidad de factorizar $N$.
+
+    Hay una segunda restricción más allá de $p \leq B$ en los primos en la base de factores. Supongamos que el primo $p$ divide a $Q_i$. La ecuación $A^2_{i-1} - N\cdot B^2_{i-1} = (-1)^i \cdot Q_i$ muestra que $(A_{i-1}/B_{i-1})^2 \equiv N (\mod p)$, por lo que $N$ es un residuo cuadrático módulo $p$. Por lo tanto, la base de factores debería contener solo primos $p$ para los cuales $N$ es un residuo cuadrático, es decir, aproximadamente la mitad de de los primos hasta $B$.
+
+    \begin{algorithm}[H]
+        \SetAlgoLined
+        \textbf{Entrada:} Un número entero $n > 1$ para factorizar\;
+        Se elige una cota superior $B$ para la base de factores \;
+        $p_0 \leftarrow -1$\;
+        Sean $p_1, \dots, p_k$ los primos $\leq B$ con $(N/p_i)=+1$\;
+        $r \leftarrow 0$\;
+        $i \leftarrow 0$\;
+        \While{$R < K + 10$}{
+            \uIf{$i = 0$}{
+                $P_i \leftarrow 0$\;
+                $Q_i \leftarrow 1$\;
+                $q_i \leftarrow \lfloor \sqrt{N} \rfloor$\;
+            }\uElseIf{$i = 1$} {
+                $P_i \leftarrow q_0$\;
+                $Q_i \leftarrow N-q^{2}_{0}$\;
+            }\uElseIf{$i \geq 2$}{
+                $P_i \leftarrow q_{i-1} \cdot Q_{i-1} - P_{i-1}$\;
+                $Q_i \leftarrow Q_{i-2} + (P_{i-1}-P_i)\cdot q_{i-1}$\;
+            }
+            \If{$i > 0$}{
+                $q_i \leftarrow \lfloor \frac{\sqrt{N}+P_i}{Q_i} \rfloor$\;
+            }
+            Se intenta factorizar $Q_i$ usando solo los primos en la base de factores\;
+            Si se tiene exito, guardar $i$, $Q_i$ y añadir $1$ a $R$\;
+            $i \leftarrow i + 1$\;
+        }
+
+        \textbf{Salida:} $[q_0, q_1, q_2, \dots]$ es la fracción continua para $x$.\ 
+        \caption{Algoritmo de factorización de enteros de fracciones continuas}
+    \end{algorithm}
+
+    \section{FACTORIZACIÓN CON CURVAS ELÍPTICAS}
+    En 1985, H. W. Lenstra, Jr. inventó un algoritmo de factorización que utiliza curvas elípticas. Se llama el método de curva elíptica o ECM. Sea $R_p$ el grupo multiplicativo de números enteros módulo un primo $p$. Consiste en los números enteros ${1, 2, \dots, p - 1}$; la operación de grupo es la multiplicación módulo $p$. Recordemos que el método de factorización $p - 1$ de Pollard, realiza un cálculo ($a^L \mod N$, donde $L$ es el producto de las potencias de los primos por debajo de algún límite $B$) en los números enteros módulo $N$ que oculta un cálculo $(a^L \mod p)$ en $R_p$.
+
+    El factor $p$ de $N$ se descubre cuando el tamaño $p - 1$ del grupo $R_p$ divide a $L$. El método $p-1$ para encontrar $p$ cuando $p-1$ tiene un divisor primo mayor que $B$. Lenstra reemplazó $R_p$ con un grupo de curvas elípticas $E_{a,b}$ módulo $p$. Por el teorema de Hasse, los dos grupos tienen aproximadamente el mismo tamaño, es decir, aproximadamente $p$. El algoritmo de Lenstra descubre $p$ cuando $M_{p,a,b}$ divide a $L$. No logra encontrar $p$ cuando $M_{p,a,b}$ tiene un factor primo mayor que $B$. Solo hay un grupo $R_p$, pero muchos grupos de curvas elípticas $E_{a,b}$ módulo $p$. Si el tamaño de $R_p$ tiene un factor primo $> B$, estamos atascados. Pero si el tamaño de $E_{a,b}$ módulo $p$ tiene un factor primo $> B$, simplemente cambiamos $a$ y $b$ y probamos con otra curva elíptica. Cada curva da una probabilidad independiente de encontrar el factor primo $p$. \citep{Lenstra1987}
+
+    Si comparamos con el algoritmo con el método $p - 1$ de Pollard. Los dos algoritmos funcionan exactamente de la misma manera, excepto que el método $p - 1$ de Pollard eleva $a$ a la potencia $p^e_i$, mientras que el método de la curva elíptica multiplica $P$ por $p^e_i$. El primer algoritmo calcula explícitamente un máximo común divisor con $N$, mientras que el segundo algoritmo oculta esta operación en el cálculo de la pendiente de la suma de puntos de la curva elíptica.
+
+    \begin{algorithm}[H]
+        \SetAlgoLined
+        \textbf{Entrada:} Un número entero $n$ para factorizar y una cota $B$\;
+        Encontrar los primos $p_1 = 2, p_2 = 3 \dots, p_k \leq B$\;
+        Elegir una curva elíptica aleatoria $E_{a,b} \mod N$ y un punto aleatorio $P != \inf$ en la curva\;
+        $g \leftarrow gcd(4a^3 + 27b^2, N)$\;
+        \If{$g=N$}{
+            Elegir una nueva curva y un nuevo punto\;
+        }
+        \If{$g > 1$}{
+            $g$ es un factor de $N$\;
+        }
+        \For{$i \leftarrow 1$ hasta $k$}{
+            $e \leftarrow \lfloor (\log B) / \log p_i \rfloor$\;
+            $P \leftarrow (p_i^e)P$ o bien encuentra un factor $g$ de $N$\;
+        }
+        Rendirse o intentar con otra curva elíptica aleatoria\;
+        \textbf{Salida:} Un factor propio $p$ de $N$\ 
+        \caption{Algoritmo simple de factorización con curvas elípticas}
+    \end{algorithm}
+
+    \section{MÉTODOS DE CRIBADO}
+        \subsection{CRIBA DE ERATOSTENES}
+        La criba de Eratóstenes encuentra los primos menores que un límite $J$. Comienza escribiendo los números $1, 2, \dots, J$. Tacha el número $1$, que no es primo. Después, sea $p$ el primer número no tachado. Entonces $p$ es primo, así que no se lo tacha, pero tacha cada $p$-esimo número (incluidos los que ya están tachados) comenzando con $2p$. Es decir, tacha todos los múltiplos de $p$ mayores que $p$. Repite esta operación, reemplazando $p$ por el siguiente número que aún no se haya tachado, siempre que $p \leq \sqrt{J}$. Todos los números tachados son compuestos (o $1$) y todos los números no tachados son primos. Este algoritmo funciona porque todo número compuesto $\leq J$ tiene un factor primo $p \leq \sqrt{J}$ y, por lo tanto, sería tachado como múltiplo de $p$. \citep{Eratostenes200}
+
+        \begin{algorithm}[H]
+            \SetAlgoLined
+            \textbf{Entrada:} Un número entero $J > 1$\;
+            $P[1] \leftarrow 0$\;
+            \For{$i \leftarrow 2$ hasta $J$}{
+                $P[i] \leftarrow 1$\;
+            }
+            \While{$p \leq \sqrt{J}$}{
+                $i \leftarrow p+p$\;
+                \While{$i \leq J$} {
+                    $P[i] \leftarrow 0$\;
+                    $i \leftarrow i + p$\;
+                }
+                $i \leftarrow p + 1$\;
+                \While{$i \leq \sqrt{J}$ y $P[i] = 0$} {
+                    $i \leftarrow i + 1$\;
+                }
+                $p \leftarrow i$\;
+            }
+            \textbf{Salida:} El arreglo $P[]$ con la lista de primos $\leq J$.\ 
+            \caption{Criba de Eratóstenes}
+        \end{algorithm}
+
+        Cuando el algoritmo termina, el valor de $P[i]$ es $1$ si $i$ es primo y $0$ si $i$ es $1$ o compuesto.
+
+        La siguiente variación busca todos los números enteros en un intervalo no divisible por ningún primo en un conjunto finito de primos. Primero escribe los números en el intervalo. Luego, para cada primo $p$ en el conjunto, tacha todos los múltiplos de $p$ en el intervalo. El conjunto de números que no está tachado es la respuesta.
+
+        \begin{algorithm}[H]
+            \SetAlgoLined
+            \textbf{Entrada:} Enteros $J > I > 1$ y un conjunto finito de primos $P$\;
+            \For{$i \leftarrow I$ hasta $J$}{
+                $A[i] \leftarrow 1$\;
+            }
+            \ForEach{$p \in P$}{
+                $i \leftarrow $ el multiplo más pequeño de $p$ que sea $\geq I$\;
+                \While{$i \leq J$}{
+                    $A[i] \leftarrow 0$\;
+                    $i \leftarrow i + p$\;
+                }
+            }
+            \textbf{Salida:} El arreglo $A[]$ con la lista de números entre $I$ y $J$ libres de factores de $P$.\ 
+            \caption{Criba de Eratóstenes Modificada}
+        \end{algorithm}
+
+        Cuando el algoritmo termina, $A[i] = 0$ si algún primo $p \in P$ divide a $i$ y $A[i] = 1$ si ningún primo en $P$ divide a $i$.
+
+        La siguiente variación factoriza los números enteros entre $I$ y $J$. Cada número entero $i$ en este intervalo está representado por una lista $L[i]$, inicialmente vacía, que contendrá los factores primos de $i$ cuando el algoritmo termine. El algoritmo primero encuentra los factores primos $\leq \sqrt{J}$ de cada $i$ con una criba. El primer bucle ''while'' coloca un $p$ en $L[i]$ siempre que $p | i$. Luego, el segundo bucle ''while'' coloca un $p$ más en $L[i]$ siempre que $p^2 | i$, un $p$ más en $L[i]$ siempre que $p^3 | i$, etc., hasta que se hayan añadido un total de $j$ $p's$ a $L[i]$ si $p^j | i$. Luego, un segundo bucle ''for'' divide $i$ por cada factor primo encontrado por la criba. Si el cofactor restante excede $1$, entonces este cofactor es un último factor primo de $i$, por lo que se agrega a la lista.
+
+        \begin{algorithm}[H]
+            \SetAlgoLined
+            \textbf{Entrada:} Enteros $J > I > 1$\;
+            \For{$i \leftarrow I$ hasta $J$}{
+                $L[i] \leftarrow []$\;
+            }
+            \ForEach{primo $p \leq \sqrt{J}$}{
+                $i \leftarrow $ el múltiplo más pequeño de $p$ con $i \geq I$\;
+                \While{$i \leq J$}{
+                    Añadimos $p$ a $L[i]$\;
+                    $i \leftarrow i + p$\;
+                }
+                $a \leftarrow 2$\;
+                \While{$p^a \leq \sqrt{J}$}{
+                    $i \leftarrow $ el múltiplo más pequeño de $p^a$ con $i \geq I$\;
+                    \While{$i \leq J$}{
+                        Añadimos $p$ a $L[i]$\;
+                        $i \leftarrow i + p^a$\;
+                    }
+                    $a \leftarrow a + 1$\;
+                }
+            }
+            \For{$i \leftarrow I$ hasta $J$}{
+                $j \leftarrow i$\;
+                \ForEach{primo $p$ en $L[i]$}{
+                    $j \leftarrow j/p$\;
+                }
+                \If{$j > 1$}{
+                    Añadimos $j$ a $L[i]$\;
+                }
+            }
+            \textbf{Salida:} Para $I \leq i \leq J$, $L[i]$ tiene los factores de $i$.\ 
+            \caption{Factorización con la Criba de Eratostenes}
+        \end{algorithm}
+
+        La última variación factoriza los números en el rango de un polinomio $f(x)$ con coeficientes enteros, pero solo encuentra los factores primos de cada $f(x)$ que se encuentran en un conjunto finito $P$ de primos. El polinomio $f(x)$ se supone fijo y no es parte de la entrada. Este algoritmo de criba es el corazón de los algoritmos de factorización de criba de cuerpos numéricos y cuadráticos. Este algoritmo funciona igual que el anterior, excepto que $L[i]$ contiene los factores primos de $f(i)$ en lugar de los de $i$. El número de raíces de $f(x) \equiv 0 (\mod p^a)$ no es mayor que el grado de $f$.
+
+        \begin{algorithm}[H]
+            \SetAlgoLined
+            \textbf{Entrada:} Enteros $J > I > 1$ y un conjunto finito $P$ de primos\;
+            \For{$i \leftarrow I$ hasta $J$}{
+                $L[i] \leftarrow []$\;
+            }
+            \ForEach{$p \in P$}{
+                Encontrar las raices $r_1, \dots, r_d$ de $f(x) \equiv 0 (\mod p)$\;
+                \For{$j \leftarrow 1$ hasta $d$}{
+                    $i \leftarrow $ el menor entero $\geq I$ y $\equiv r_j (\mod p)$\;
+                    \While{$i \leq J$}{
+                        Añadimos $p$ a $L[i]$\;
+                        $i \leftarrow i + p$\;
+                    }
+                    $a \leftarrow 2$\;
+                    \While{$p^a \leq \sqrt{J}$}{
+                        Elevar $r_j$ a una raíz $r$ de $f(x) \equiv 0 (\mod p^a)$\;
+                        $i \leftarrow $ el menor entero $\geq I$ y $\equiv r(\mod p^a)$\;
+                        \While{$i \leq J$}{
+                            Añadimos $p$ a $L[i]$\;
+                            $i \leftarrow i + p^a$\;
+                        }
+                        $a \leftarrow a + 1$\;
+                    }
+                }
+            }
+            \textbf{Salida:} Para $I \leq i \leq J$, $L[i]$ tiene los factores en $P$ de $f(i)$.\ 
+            \caption{Criba para Factorizar el rango de un polinomio}
+        \end{algorithm}
+        
+        \subsection{CRIBA CUADRÁTICA}
+        El algoritmo de factorización de criba cuadrática es similar al algoritmo de factorización de fracciones continuas. La diferencia radica en el método de producir relaciones $x^2 \equiv q(\mod N)$ con $q$ factorizada completamente. El CFRAC forma $x$ y $q$ a partir de la expansión fraccionaria continua de $\sqrt{N}$ y factoriza $q$ por divisiones sucesivas, que es lenta. Es probable que los residuos cuadráticos $q$ en el CFRAC sean suaves porque son $< 2\sqrt{N}$.
+        El algoritmo de factorización de criba cuadrática (QS) fue inventado por Pomerance, pero muchas de sus ideas se remontan a Kraitchik. Produce $x$ y $q$ utilizando un polinomio cuadrático $q = f(x)$ y factoriza $q$ con una criba, un proceso mucho más rápido que las divisiones sucesivas. El polinomio cuadrático $f(x)$ se elige de modo que $q$ sea lo más pequeño posible. Esto significa que la mayoría de ellos superarán $2\sqrt{N}$, pero no por un factor grande, de modo que es casi tan probable que sean suaves como $q$ en el CFRAC.
+
+        Sean $f(x) = x^2 - N$ y $s=\lceil\sqrt{N}\rceil$ Consideremos los números $f(s), f(s+1), f(s+2), \dots$
+
+        La criba cuadrática factoriza algunos de estos números mediante la criba para factorizar el rango de un polinomio. Si hay $K$ primos $p \leq B$ y podemos encontrar números $R > K$ acotados en $B$ $f(x)$, entonces tendremos $R$ relaciones que involucran $K$ primos y el álgebra lineal nos dará al menos $R - K$ congruencias $x^2 \equiv y^2 (\mod N)$, cada una de las cuales tiene una probabilidad de al menos $1/2$ de factorizar $N$.
+
+        Cribamos utilizando la criba para factorizar el rango de un polinomio para encontrar los números acotados en $B$ entre $f(s), f(s + 1), f(s + 2),\dots$ La base factorial $P$ consiste en los primos $p<B$ (para los cuales el símbolo de Legendre $(N/p) = -1$). Escribimos los números $f(s + i)$ para $i$ en un intervalo $a \leq i < b$ de longitud conveniente, digamos unos pocos millones. El primer intervalo tendrá $a = s$. Los intervalos subsiguientes comenzarán con $a$ igual al punto final $b$ del intervalo anterior. Para cada primo $p<B$, eliminamos todos los factores de $p$ de aquellas $f(s + i)$ que $p$ divide. Como $f(x) = x^2 - N$, $p$ divide a $f(x)$ precisamente cuando $x^2 \equiv N (\mod p)$. Las soluciones $x$ para esta congruencia se encuentran en la unión de dos progresiones aritméticas con diferencia común $p$. Si las raíces de $x^2 \equiv N (\mod p)$ son $x_1$ y $x_2$, entonces las progresiones aritméticas comienzan con los primeros números $\equiv x_1$ y $x_2 (\mod p)$ que son $\geq a$. El factor primo $p$ se elimina de cada $f(s + i)$ que divide.
+
+        El número de operaciones de criba para un número primo $p$ es aproximadamente $\frac{2}{p} (b - a)$ porque exactamente dos de cada $p$ números se dividen por $p$. La complejidad de la criba es $\sum_{p<B,p \text{ primo}} \frac{2}{p} (b-a)$. Se puede demostrar que esta suma es $O((b - a) \ln \ln B)$. El coste amortizado de cribar un valor $i$ es entonces $\ln \ln B$. \citep{Pomerance1982}
+
+        \subsection{CRIBA DEL CUERPO DE NÚMEROS}
+        Pollard fue el primero en sugerir elevar el grado del polinomio en la criba cuadrática de 2 a un valor superior, pero sólo para números con forma especial. Él factorizó el número de Fermat $F_7$ (que había sido factorizado anteriormente por Morrison y Brillhart) utilizando el polinomio cúbico $2x^3+2$ en una pequeña computadora. Manasse y los hermanos Lenstra pronto extendieron las ideas de Pollard a polinomios de grado superior, todavía sólo para números de la forma $r^e - s$. Su objetivo era factorizar $F_9$, el número de Fermat más pequeño sin factor primo conocido. Esperaban utilizar la forma especial de $F_9$ para hacer que los números que debían suavizarse fueran más pequeños que los necesarios para la criba cuadrática. Después de factorizar $F_9$ en 1990, ellos y otros extendieron la criba del cuerpo numérico a números generales.
+
+        Recordemos que la criba cuadrática produce muchas relaciones $x^2_i \equiv q_i (\mod N)$ con $q_i$ factorizado completamente. Cuando tenemos suficientes relaciones, hacemos coincidir los factores primos del $q_i$ y creamos un subconjunto del $q_i$ cuyo producto es cuadrado. De esta manera, encontramos congruencias $x^2 \equiv y^2 (\mod N)$ que pueden factorizar $N$.
+
+        Busquemos relaciones $r_i \equiv q_i (\mod N)$ en las que tanto $r_i$ como $q_i$ hayan sido factorizadas completamente, como en las cribas dobles y lineales. Usaremos álgebra lineal para hacer coincidir los factores primos de $r_i$ y los factores primos de $q_i$ y seleccionaremos un subconjunto de las relaciones para las que tanto el producto de $r_i$ como el producto de $q_i$ sean cuadrados. Esta es una buena idea, pero demasiado lenta para ser práctica. La principal dificultad es que al menos uno de $|r_i|$, $|q_i|$ debe ser mayor que $N/2$, por lo que tiene una baja probabilidad de ser suave. \citep{Pomerance1994}
+
+        La Criba del cuerpo de números hace que la idea sea rápida y práctica al permitir que los números de un lado de cada relación sean enteros algebraicos de un campo numérico algebraico. La idea es hacer coincidir los factores irreducibles de modo que cada uno aparezca un número par de veces y el producto de los enteros algebraicos en el subconjunto seleccionado de las relaciones pueda ser un cuadrado en el campo numérico algebraico.
+
+        En resumen, la criba del cuerpo de números tiene los siguientes pasos:
+        \begin{enumerate}
+            \item Seleccionamos un polinomio $f(x) \in \zeta[x]$ y un entero $m$ con $f(m) \equiv 0(\mod N)$.
+            \item Cribar los números $a-bm$ y $N(a-b\alpha)$; guardamos $(a,b)$ cuando ambos $a-bm$ y $N(a-b\alpha)$ están acotados.
+            \item Filtramos la relación para remover duplicados y aquellos que contengan un primo que no aparezca en otra relación.
+            \item Usamos algebra lineal modulo 2 para encontrar los conjuntos $S$ como en las formulas:
+            \[
+                \prod_{(a,b) \in S}(a - bm) \text{ es un cuadrado en } \mathbb{Z}
+            \]
+            \[
+                \prod_{(a,b) \in S}(a - b\alpha) \text{ es un cuadrado en } \mathbb{Z}[\alpha]
+            \]
+            \item Encontramos las raíces $y$ y $\gamma$ de los cuadrados de las formulas del paso anterior
+            \item Sea $x=h(\gamma)$; intentamos factorizar $N$ a través de $gcd(N, x\pm y)$
+        \end{enumerate}

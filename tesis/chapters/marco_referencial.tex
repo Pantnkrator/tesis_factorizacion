@@ -1,0 +1,109 @@
+\chapter{ANTECEDENTES GENERALES O MARCO REFERENCIAL}
+    \section{INTRODUCCIÓN}
+
+    % \thispagestyle{empty}
+
+    Factorizar números enteros es importante, hoy más que nunca la factorización de números enteros juega un papel crucial en la vida de todas las personas. Los métodos de encriptación actuales se basan, en gran medida, en la complejidad y el tiempo que toma factorizar números grandes.
+
+    También se debe notar la definición de número grande, si se le pregunta a un niño que es un número grande este puede decirnos que es el 100 o hasta el 1000 y si se le preguntara a una persona adulta esta podría decirnos 1 000 000 o 100 000 000, pero esto no es nada si se piensa en los problemas que hoy en día lidian los matemáticos.
+
+    Factorizar un número se refiere a encontrar todos los factores primos por los que está compuesto dicho número. El teorema fundamental de la aritmética nos dice que para todo número entero positivo mayor a 1 es un numero primo o bien un único producto de números primos (Euclides, 300 AC).
+    \[
+    n = \prod_{i=1}^{k}p_{i}^{a_{i}}
+    \]
+    Este es el objetivo que buscamos, encontrar esos factores para números, ahora sí, grandes.
+
+    Los algoritmos de encriptación actuales, como RSA, usan números de, por ejemplo, 250 dígitos (829 bits) que fue el último en ser factorizado febrero de 2020. Estos son los números grandes que nos interesan. Los números RSA por ejemplo son números con exactamente dos factores primos, estos números primos, de al menos, la mitad de cantidad de dígitos que el resultado.
+
+    Hoy en día tenemos diferentes métodos de factorización como los algoritmos simples de factorización, fracciones continuas, curva elíptica, algoritmos de cribado y hasta nuevos algoritmos basados en programación cuántica.
+
+    En este trabajo se estudiará los diferentes métodos de factorización de números y su implementación con diferentes enfoques y refinamientos de implementación que el autor propondrá para ciertos métodos. Con esto se podrá revisar los alcances de los algoritmos de encriptación actuales y a donde se puede llegar en base a estos y realizar una comparación de los mismo, mostrando que algoritmo es el adecuado dada ciertas condiciones.
+    \section{PROBLEMA}
+        \subsection{ANTECEDENTES}
+        Los algoritmos de factorización de números enteros han sido y son un area de interés en el campo de la teoría de números, criptografía y ciencias de la computación, los primeros algoritmos para realizar esta tarea sn tan antiguos como la matemática misma y con el pasar de los años se fueron agregando nuevos y mejores algoritmos y métodos para factorizar números enteros.
+
+        Las siguientes investigaciones proporcionan un marco importante para el estudio de los algoritmos de factorización de números y han influido significativamente en el desarrollo de este campo:
+
+        \begin{itemize}
+            \item \textbf{Título:} ``A monte carlo method for factorization'' \\
+            \textbf{Autor:} J. M. Pollard \\
+            \textbf{Año:} 1975 \\
+            \textbf{Institución:} BIT Numerical Mathematics \\
+            \textbf{Resumen:} Se describe brevemente un nuevo método de factorización que involucra ideas probabilísticas y se sugiere que este método debería considerarse como una alternativa viable a los métodos de factorización tradicionales. \citep{Pollard1975}.
+        
+            \item \textbf{Título:} ``Theorems on factorization and primality testing'' \\
+            \textbf{Autor:} J. M. Pollard \\
+            \textbf{Año:} 1974 \\
+            \textbf{Institución:} Mathematical Proceedings of the Cambridge Philosophical Society \\
+            \textbf{Resumen:} Este artículo trata del problema de obtener estimaciones teóricas para el número de operaciones aritméticas necesarias para factorizar un entero grande $n$ o comprobar su primalidad. \citep{Pollard1974}.
+        
+            \item \textbf{Título:} ``A one line factoring algorithm'' \\
+            \textbf{Autor:} W. B. Hart \\
+            \textbf{Año:} 2012 \\
+            \textbf{Institución:} Journal of the Australian Mathematical Society \\
+            \textbf{Resumen:} Describimos una variante del algoritmo de factorización de Fermat que es competitiva con SQUFOF en la práctica, pero tiene una complejidad de tiempo de ejecución heurística $O(n^{1/3})$ como algoritmo de factorización general. También describimos una clase dispersa de números enteros para los que el algoritmo es particularmente eficaz. Ofrecemos comparaciones de velocidad entre una implementación optimizada del algoritmo descrito y la variedad optimizada de algoritmos de factorización en el paquete de álgebra computacional Pari/GP. \citep{Hart2012}.
+
+            \item \textbf{Título:} ``A method of factoring and the
+            factorization of F7'' \\
+            \textbf{Autor:} M. A. Morrison and J. Brillhar\\
+            \textbf{Año:} 1975 \\
+            \textbf{Institución:} Mathematics of Computation, \\
+            \textbf{Resumen:} Se analiza el método de fracciones continuas para factorizar números enteros, introducido por D. H. Lehmer y R. E. Powers, junto con su implementación informática. La potencia del método se demuestra con la factorización del séptimo número de Fermât $F_7$ y otros grandes números de interés. \citep{Morrison1975}.
+        \end{itemize}
+    
+        \subsection{PLANTEAMIENTO DEL PROBLEMA}
+        Con el avance de las computadoras y el mayor poder de cómputo, toda la seguridad basada en factorización y factores primos corre riesgo de quedar deprecada algún día.
+
+        Por esto es necesario tener un compendio de gran parte de los métodos y algoritmos de factorización existentes y sus limitaciones, con el poder de cómputo actual. Por otro lado, hoy en día con la ayuda de los nuevos y mejores procesadores muchos algoritmos pueden ser paralelizados lo que reduciría su tiempo de ejecución.
+
+        \subsection{FORMULACIÓN DEL PROBLEMA}
+        ¿Qué método de factorización de números enteros es mejor de acuerdo a las características de los números?
+    
+    \section{OBJETIVOS}
+        \subsection{OBJETIVO GENERAL}
+        Estudiar y realizar una evaluación de números enteros con diferentes características y aplicando sobre ellos algoritmos de factorización de números enteros, comparando el tiempo de ejecución, espacio en memoria y factores primos encontrados.
+
+        \subsection{OBJETIVOS ESPECÍFICOS}
+        \begin{itemize}
+            \item{Revisar el estado del arte referido a algoritmos de factorización de números enteros.}
+            \item{Programar algoritmos de factorización de números enteros.}
+            \item{Refinamiento de métodos de factorización de números enteros.}
+            \item{Evaluar el desempeño de los programas con base en tiempo de ejecución, espacio en memoria y factores primos encontrados.}
+        \end{itemize}
+    
+    \section{HIPÓTESIS}
+    Para números donde la diferencia entre factores primos sea pequeña el algoritmo de Fermat es el mejor en cuanto a tiempo de ejecución, para números en general y de uso cotidiano el que presenta un mejor tiempo promedio es Pollard Rho y los métodos de cribado.
+    
+    \section{JUSTIFICACIÓN}
+        \subsection{JUSTIFICACIÓN ECONÓMICA}
+        Con el constante avance de la tecnología y la ciencia en diferentes campos hace que cada día se necesite de mejores equipos, maquinaria, software, hardware entre otros, lo cual implica costos gigantescos, por lo cual hacer una redefinición en las herramientas teóricas resulta ser un gran ahorro y reducción de gastos para las diferentes investigaciones realizadas por universidades, instituciones del estado, comunidades científicas.
+
+        Además de una reducción de tiempos, el cual es representado a su vez en una reducción de costos, mejorando así la accesibilidad a nuevos campos de investigación.
+        
+        \subsection{JUSTIFICACIÓN SOCIAL}
+        La sociedad en su conjunto se beneficia indirectamente ya que la presente investigación está enfocada al área teórica pero enteramente ligada a futuros campos de investigación y aplicación para mejorar el estilo de vida, hambre de conocimientos y experimentación por parte de la población en general.
+
+        \subsection{JUSTIFICACIÓN CIENTÍFICA}
+        La presente investigación brinda al campo científico tecnológico un complejo análisis de diferentes algoritmos de factorización, lo cual conlleva a tener nuevos y/o actualizaciones de los mismos generando avances en diferentes campos no solo del área sino también de otros campos afines, generando propuestas o aplicaciones de la presente investigación.
+
+        Por lo tanto, al emprender la investigación de los algoritmos de factorización de números enteros grandes y su evaluación, profundiza el conocimiento, aportando así a futuras investigaciones, ya que se está trabajando en un área en desarrollo. Así también como bases prácticas y teóricas para la aplicación de dichos algoritmos en áreas como el análisis complejo de números primos, representación del conocimiento, teoría de números, criptografía, combinatoria, entre otros.
+    
+    \section{ALCANCES Y LIMITES}
+        \subsection{ALCANCES}
+        \begin{itemize}
+            \item{Se implementaran los métodos teoricos descritos en un lenguage de programacion moderno.}
+            \item{Se realizará un análisis teórico mediante una función que limitará el tiempo de cálculo del algoritmo y una prueba experimental de dónde se recogerán estadísticas de tiempo consumido por los diferentes algoritmos.}
+            \item{Se refinara los métodos a nivel de implementacion.}
+            \item{Se comparara los resultados de los diferentes tiempos de ejecucion y memoria de cada algoritmo}
+            
+        \end{itemize}
+        \subsection{LIMITES}
+        \begin{itemize}
+            \item{No se tomara en cuenta algoritmos cuanticos.}
+            \item{No se tomara en cuenta algoritmos hibridos.}
+            \item{No se demostrara la correctitud de los métodos de manera teorica.}
+        \end{itemize}
+    
+    \section{METODOLOGÍA}
+    Para el desarrollo del presente trabajo se utilizará el método lógico inductivo ya que partiremos de casos particulares de factorización de números enteros para posteriormente llegar a una conclusión respecto a cada uno de los algoritmos que serán comparados y refinados.
+    

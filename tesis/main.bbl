@@ -1,0 +1,459 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/global//global/global}
+    \entry{Cormen2009}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=45b8a1d10dd28c65dd843a76583308c3}{%
+           family={Cormen},
+           familyi={C\bibinitperiod},
+           given={T.\bibnamedelimi H.},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c71fd291b2f1a30d3a8bdcd818638fd0}{%
+           family={Leiserson},
+           familyi={L\bibinitperiod},
+           given={C.\bibnamedelimi E.},
+           giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6a630bbc1f4da3f000de53a8c3fcda9a}{%
+           family={Rivest},
+           familyi={R\bibinitperiod},
+           given={R.\bibnamedelimi L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=340a9e41a37c56843c3354ab4ef758e7}{%
+           family={Stein},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{677319d1db3e1c54f3d98b68b2a6a846}
+      \strng{fullhash}{677319d1db3e1c54f3d98b68b2a6a846}
+      \strng{bibnamehash}{677319d1db3e1c54f3d98b68b2a6a846}
+      \strng{authorbibnamehash}{677319d1db3e1c54f3d98b68b2a6a846}
+      \strng{authornamehash}{677319d1db3e1c54f3d98b68b2a6a846}
+      \strng{authorfullhash}{677319d1db3e1c54f3d98b68b2a6a846}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Algorithms}
+      \field{year}{2009}
+      \field{pages}{47}
+      \range{pages}{1}
+    \endentry
+    \entry{Eratostenes200}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=12b62dc7e61d9d7fc0e040fb80313d0d}{%
+           family={Cirene},
+           familyi={C\bibinitperiod},
+           given={Eratostenes},
+           giveni={E\bibinitperiod},
+           givenun=0,
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{12b62dc7e61d9d7fc0e040fb80313d0d}
+      \strng{fullhash}{12b62dc7e61d9d7fc0e040fb80313d0d}
+      \strng{bibnamehash}{12b62dc7e61d9d7fc0e040fb80313d0d}
+      \strng{authorbibnamehash}{12b62dc7e61d9d7fc0e040fb80313d0d}
+      \strng{authornamehash}{12b62dc7e61d9d7fc0e040fb80313d0d}
+      \strng{authorfullhash}{12b62dc7e61d9d7fc0e040fb80313d0d}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{year}{200 a.C.}
+    \endentry
+    \entry{Fermat1894}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=8602d8eeb9527dbdbd36743672a730a2}{%
+           family={Fermat},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{8602d8eeb9527dbdbd36743672a730a2}
+      \strng{fullhash}{8602d8eeb9527dbdbd36743672a730a2}
+      \strng{bibnamehash}{8602d8eeb9527dbdbd36743672a730a2}
+      \strng{authorbibnamehash}{8602d8eeb9527dbdbd36743672a730a2}
+      \strng{authornamehash}{8602d8eeb9527dbdbd36743672a730a2}
+      \strng{authorfullhash}{8602d8eeb9527dbdbd36743672a730a2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Oeuvres de Fermat}
+      \field{year}{1894}
+      \field{pages}{256}
+      \range{pages}{1}
+    \endentry
+    \entry{HW1975}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9d761c354d534c74e69f17afcc78fea8}{%
+           family={Hardy},
+           familyi={H\bibinitperiod},
+           given={G.\bibnamedelimi H.},
+           giveni={G\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7e9f6a8eceef8c359617e0d4f16093bb}{%
+           family={Wright},
+           familyi={W\bibinitperiod},
+           given={E.\bibnamedelimi M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a8a8446dcadb4dac425e5616e5c6669f}
+      \strng{fullhash}{a8a8446dcadb4dac425e5616e5c6669f}
+      \strng{bibnamehash}{a8a8446dcadb4dac425e5616e5c6669f}
+      \strng{authorbibnamehash}{a8a8446dcadb4dac425e5616e5c6669f}
+      \strng{authornamehash}{a8a8446dcadb4dac425e5616e5c6669f}
+      \strng{authorfullhash}{a8a8446dcadb4dac425e5616e5c6669f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Introduction to the Theory of Numbers}
+      \field{year}{1975}
+    \endentry
+    \entry{Hart2012}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=1b53992ea081e2b08bbe1e9a11fcaf75}{%
+           family={Hart},
+           familyi={H\bibinitperiod},
+           given={W.\bibnamedelimi B.},
+           giveni={W\bibinitperiod\bibinitdelim B\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{1b53992ea081e2b08bbe1e9a11fcaf75}
+      \strng{fullhash}{1b53992ea081e2b08bbe1e9a11fcaf75}
+      \strng{bibnamehash}{1b53992ea081e2b08bbe1e9a11fcaf75}
+      \strng{authorbibnamehash}{1b53992ea081e2b08bbe1e9a11fcaf75}
+      \strng{authornamehash}{1b53992ea081e2b08bbe1e9a11fcaf75}
+      \strng{authorfullhash}{1b53992ea081e2b08bbe1e9a11fcaf75}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A one line factoring algorithm}
+      \field{year}{2012}
+    \endentry
+    \entry{Knuth1976}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=c7986b8f9a74e8a99dd8346c98b35f3e}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={D.\bibnamedelimi E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0a9182e8a4f3bd4402904153d51fbf1e}{%
+           family={Pardo},
+           familyi={P\bibinitperiod},
+           given={L.\bibnamedelimi Trabb},
+           giveni={L\bibinitperiod\bibinitdelim T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c167b3fca4a20099502140138d65f9e2}
+      \strng{fullhash}{c167b3fca4a20099502140138d65f9e2}
+      \strng{bibnamehash}{c167b3fca4a20099502140138d65f9e2}
+      \strng{authorbibnamehash}{c167b3fca4a20099502140138d65f9e2}
+      \strng{authornamehash}{c167b3fca4a20099502140138d65f9e2}
+      \strng{authorfullhash}{c167b3fca4a20099502140138d65f9e2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Analysis of a simple factorization algorithm}
+      \field{year}{1975}
+      \field{pages}{321\bibrangedash 348}
+      \range{pages}{28}
+    \endentry
+    \entry{Lawrence1895}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=45b869a596b0749cc23fb404df71d2a3}{%
+           family={Lawrence},
+           familyi={L\bibinitperiod},
+           given={F.W.},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{45b869a596b0749cc23fb404df71d2a3}
+      \strng{fullhash}{45b869a596b0749cc23fb404df71d2a3}
+      \strng{bibnamehash}{45b869a596b0749cc23fb404df71d2a3}
+      \strng{authorbibnamehash}{45b869a596b0749cc23fb404df71d2a3}
+      \strng{authornamehash}{45b869a596b0749cc23fb404df71d2a3}
+      \strng{authorfullhash}{45b869a596b0749cc23fb404df71d2a3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Factorisation of numbers, Messinger of Math}
+      \field{year}{1895}
+    \endentry
+    \entry{Lenstra1987}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=b73f79226ed372448d42d2dbfb171678}{%
+           family={Lenstra},
+           familyi={L\bibinitperiod},
+           given={H.W.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{b73f79226ed372448d42d2dbfb171678}
+      \strng{fullhash}{b73f79226ed372448d42d2dbfb171678}
+      \strng{bibnamehash}{b73f79226ed372448d42d2dbfb171678}
+      \strng{authorbibnamehash}{b73f79226ed372448d42d2dbfb171678}
+      \strng{authornamehash}{b73f79226ed372448d42d2dbfb171678}
+      \strng{authorfullhash}{b73f79226ed372448d42d2dbfb171678}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Factoring integers with elliptic curves}
+      \field{year}{1987}
+    \endentry
+    \entry{Morrison1975}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=16934ac5392138a4a814179a7c37d56f}{%
+           family={Morrison},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi A.},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d334b9bc7db1a020b6998a34c6f8a1a}{%
+           family={Brillhar},
+           familyi={B\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c49abeeef2d220ce22e35d3faad638f4}
+      \strng{fullhash}{c49abeeef2d220ce22e35d3faad638f4}
+      \strng{bibnamehash}{c49abeeef2d220ce22e35d3faad638f4}
+      \strng{authorbibnamehash}{c49abeeef2d220ce22e35d3faad638f4}
+      \strng{authornamehash}{c49abeeef2d220ce22e35d3faad638f4}
+      \strng{authorfullhash}{c49abeeef2d220ce22e35d3faad638f4}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A method of factoring and the factorization of F7}
+      \field{year}{1975}
+    \endentry
+    \entry{NZM1991}{book}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=cd7a210bb91b68b59d9e2dca4e14cbf6}{%
+           family={Niven},
+           familyi={N\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4380227b3b3e2d196500ce716cb17bae}{%
+           family={Zuckerman},
+           familyi={Z\bibinitperiod},
+           given={H.\bibnamedelimi S.},
+           giveni={H\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=98296eedbd8e7fdb593797362d5ac2c7}{%
+           family={Montgomery},
+           familyi={M\bibinitperiod},
+           given={H.\bibnamedelimi L.},
+           giveni={H\bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{946eb8c03621e01c35fc013d00efd429}
+      \strng{fullhash}{946eb8c03621e01c35fc013d00efd429}
+      \strng{bibnamehash}{946eb8c03621e01c35fc013d00efd429}
+      \strng{authorbibnamehash}{946eb8c03621e01c35fc013d00efd429}
+      \strng{authornamehash}{946eb8c03621e01c35fc013d00efd429}
+      \strng{authorfullhash}{946eb8c03621e01c35fc013d00efd429}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{An Introduction to the Theroy of Numbers}
+      \field{year}{1991}
+      \field{pages}{1}
+      \range{pages}{1}
+    \endentry
+    \entry{Pollard1974}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=164b2706dabd34ff48474d51b4589bee}{%
+           family={Pollard},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{164b2706dabd34ff48474d51b4589bee}
+      \strng{fullhash}{164b2706dabd34ff48474d51b4589bee}
+      \strng{bibnamehash}{164b2706dabd34ff48474d51b4589bee}
+      \strng{authorbibnamehash}{164b2706dabd34ff48474d51b4589bee}
+      \strng{authornamehash}{164b2706dabd34ff48474d51b4589bee}
+      \strng{authorfullhash}{164b2706dabd34ff48474d51b4589bee}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Theorems on factorization and primality testing}
+      \field{year}{1974}
+    \endentry
+    \entry{Pollard1975}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=164b2706dabd34ff48474d51b4589bee}{%
+           family={Pollard},
+           familyi={P\bibinitperiod},
+           given={J.\bibnamedelimi M.},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{164b2706dabd34ff48474d51b4589bee}
+      \strng{fullhash}{164b2706dabd34ff48474d51b4589bee}
+      \strng{bibnamehash}{164b2706dabd34ff48474d51b4589bee}
+      \strng{authorbibnamehash}{164b2706dabd34ff48474d51b4589bee}
+      \strng{authornamehash}{164b2706dabd34ff48474d51b4589bee}
+      \strng{authorfullhash}{164b2706dabd34ff48474d51b4589bee}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Monte Carlo method for factorization}
+      \field{year}{1975}
+    \endentry
+    \entry{Pomerance1982}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a658c262e68541245018e2e8dd4064a7}{%
+           family={Pomerance},
+           familyi={P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a658c262e68541245018e2e8dd4064a7}
+      \strng{fullhash}{a658c262e68541245018e2e8dd4064a7}
+      \strng{bibnamehash}{a658c262e68541245018e2e8dd4064a7}
+      \strng{authorbibnamehash}{a658c262e68541245018e2e8dd4064a7}
+      \strng{authornamehash}{a658c262e68541245018e2e8dd4064a7}
+      \strng{authorfullhash}{a658c262e68541245018e2e8dd4064a7}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Analysis and comparison of some integer factoring algorithms}
+      \field{year}{1982}
+    \endentry
+    \entry{Pomerance1994}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a658c262e68541245018e2e8dd4064a7}{%
+           family={Pomerance},
+           familyi={P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a658c262e68541245018e2e8dd4064a7}
+      \strng{fullhash}{a658c262e68541245018e2e8dd4064a7}
+      \strng{bibnamehash}{a658c262e68541245018e2e8dd4064a7}
+      \strng{authorbibnamehash}{a658c262e68541245018e2e8dd4064a7}
+      \strng{authornamehash}{a658c262e68541245018e2e8dd4064a7}
+      \strng{authorfullhash}{a658c262e68541245018e2e8dd4064a7}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The number ﬁeld sieve}
+      \field{year}{1994}
+    \endentry
+    \entry{Wagstaff2013}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d602a7c6676f27e63e9eea4ddf2a3cca}{%
+           family={S.\bibnamedelimi S.\bibnamedelimi Wagstaff},
+           familyi={S\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim W\bibinitperiod},
+           given={Jr.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{d602a7c6676f27e63e9eea4ddf2a3cca}
+      \strng{fullhash}{d602a7c6676f27e63e9eea4ddf2a3cca}
+      \strng{bibnamehash}{d602a7c6676f27e63e9eea4ddf2a3cca}
+      \strng{authorbibnamehash}{d602a7c6676f27e63e9eea4ddf2a3cca}
+      \strng{authornamehash}{d602a7c6676f27e63e9eea4ddf2a3cca}
+      \strng{authorfullhash}{d602a7c6676f27e63e9eea4ddf2a3cca}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{year}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Joy of Factoring}
+      \field{year}{2013}
+      \field{pages}{17}
+      \range{pages}{1}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
