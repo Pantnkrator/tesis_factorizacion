@@ -7,11 +7,11 @@
 \contentsline {subsection}{\numberline {1.2.3}FORMULACIÓN DEL PROBLEMA}{4}{subsection.1.2.3}%
 \contentsline {section}{\numberline {1.3}OBJETIVOS}{4}{section.1.3}%
 \contentsline {subsection}{\numberline {1.3.1}OBJETIVO GENERAL}{4}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}OBJETIVOS ESPECÍFICOS}{4}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.2}OBJETIVOS ESPECÍFICOS}{5}{subsection.1.3.2}%
 \contentsline {section}{\numberline {1.4}HIPÓTESIS}{5}{section.1.4}%
 \contentsline {section}{\numberline {1.5}JUSTIFICACIÓN}{5}{section.1.5}%
 \contentsline {subsection}{\numberline {1.5.1}JUSTIFICACIÓN ECONÓMICA}{5}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}JUSTIFICACIÓN SOCIAL}{5}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.2}JUSTIFICACIÓN SOCIAL}{6}{subsection.1.5.2}%
 \contentsline {subsection}{\numberline {1.5.3}JUSTIFICACIÓN CIENTÍFICA}{6}{subsection.1.5.3}%
 \contentsline {section}{\numberline {1.6}ALCANCES Y LIMITES}{6}{section.1.6}%
 \contentsline {subsection}{\numberline {1.6.1}ALCANCES}{6}{subsection.1.6.1}%
@@ -39,59 +39,59 @@
 \contentsline {subsection}{\numberline {2.18.1}CRIBA DE ERATOSTENES}{25}{subsection.2.18.1}%
 \contentsline {subsection}{\numberline {2.18.2}CRIBA CUADRÁTICA}{31}{subsection.2.18.2}%
 \contentsline {subsection}{\numberline {2.18.3}CRIBA DEL CUERPO DE NÚMEROS}{32}{subsection.2.18.3}%
-\contentsline {chapter}{\numberline {3}MARCO APLICATIVO}{34}{chapter.3}%
-\contentsline {section}{\numberline {3.1}ALGORITMOS DE FACTORIZACIÓN}{34}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}ALGORITMO DE EUCLIDES}{34}{subsection.3.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.1.1}IMPLEMENTACIÓN}{34}{subsubsection.3.1.1.1}%
-\contentsline {subsubsection}{\numberline {3.1.1.2}EJEMPLO NÚMERICO}{35}{subsubsection.3.1.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.1.3}EJEMPLO DE EJECUCIÓN}{35}{subsubsection.3.1.1.3}%
-\contentsline {subsection}{\numberline {3.1.2}ALGORITMO EXTENDIDO DE EUCLIDES}{35}{subsection.3.1.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.1}IMPLEMENTACIÓN}{36}{subsubsection.3.1.2.1}%
-\contentsline {subsubsection}{\numberline {3.1.2.2}EJEMPLO NÚMERICO}{36}{subsubsection.3.1.2.2}%
-\contentsline {subsubsection}{\numberline {3.1.2.3}EJEMPLO DE EJECUCIÓN}{37}{subsubsection.3.1.2.3}%
-\contentsline {subsection}{\numberline {3.1.3}ALGORITMO DE EXPONENCIACIÓN MODULAR}{37}{subsection.3.1.3}%
-\contentsline {subsubsection}{\numberline {3.1.3.1}IMPLEMENTACIÓN}{37}{subsubsection.3.1.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.3.2}EJEMPLO NÚMERICO}{38}{subsubsection.3.1.3.2}%
-\contentsline {subsubsection}{\numberline {3.1.3.3}EJEMPLO DE EJECUCIÓN}{38}{subsubsection.3.1.3.3}%
-\contentsline {subsection}{\numberline {3.1.4}ALGORITMO DE DIVISIONES SUCESIVAS}{39}{subsection.3.1.4}%
-\contentsline {subsubsection}{\numberline {3.1.4.1}IMPLEMENTACIÓN}{39}{subsubsection.3.1.4.1}%
-\contentsline {subsubsection}{\numberline {3.1.4.2}EJEMPLO NÚMERICO}{40}{subsubsection.3.1.4.2}%
-\contentsline {subsubsection}{\numberline {3.1.4.3}EJEMPLO DE EJECUCIÓN}{40}{subsubsection.3.1.4.3}%
-\contentsline {subsection}{\numberline {3.1.5}MÉTODO DE DIFERENCIA DE CUADRADOS DE FERMAT}{40}{subsection.3.1.5}%
-\contentsline {subsubsection}{\numberline {3.1.5.1}IMPLEMENTACIÓN}{40}{subsubsection.3.1.5.1}%
-\contentsline {subsubsection}{\numberline {3.1.5.2}EJEMPLO NÚMERICO}{41}{subsubsection.3.1.5.2}%
-\contentsline {subsubsection}{\numberline {3.1.5.3}EJEMPLO DE EJECUCIÓN}{43}{subsubsection.3.1.5.3}%
-\contentsline {subsection}{\numberline {3.1.6}ALGORITMO DE FACTORIZACIÓN EN UNA LINEA DE HART}{43}{subsection.3.1.6}%
-\contentsline {subsubsection}{\numberline {3.1.6.1}IMPLEMENTACIÓN}{43}{subsubsection.3.1.6.1}%
-\contentsline {subsubsection}{\numberline {3.1.6.2}EJEMPLO NÚMERICO}{44}{subsubsection.3.1.6.2}%
-\contentsline {subsubsection}{\numberline {3.1.6.3}EJEMPLO DE EJECUCIÓN}{45}{subsubsection.3.1.6.3}%
-\contentsline {subsection}{\numberline {3.1.7}MÉTODO DE POLLARD RHO}{45}{subsection.3.1.7}%
-\contentsline {subsubsection}{\numberline {3.1.7.1}IMPLEMENTACIÓN}{45}{subsubsection.3.1.7.1}%
-\contentsline {subsubsection}{\numberline {3.1.7.2}EJEMPLO NÚMERICO}{46}{subsubsection.3.1.7.2}%
-\contentsline {subsubsection}{\numberline {3.1.7.3}EJEMPLO DE EJECUCIÓN}{48}{subsubsection.3.1.7.3}%
-\contentsline {subsection}{\numberline {3.1.8}ALGORITMO DE FACTORIZACIÓN DE ENTEROS DE FRACCIONES CONTINUAS}{48}{subsection.3.1.8}%
-\contentsline {subsubsection}{\numberline {3.1.8.1}IMPLEMENTACIÓN}{48}{subsubsection.3.1.8.1}%
-\contentsline {subsubsection}{\numberline {3.1.8.2}EJEMPLO DE EJECUCIÓN}{50}{subsubsection.3.1.8.2}%
-\contentsline {subsection}{\numberline {3.1.9}ALGORITMO DE FACTORIZACIÓN CON CURVAS ELÍPTICAS}{50}{subsection.3.1.9}%
-\contentsline {subsubsection}{\numberline {3.1.9.1}IMPLEMENTACIÓN}{50}{subsubsection.3.1.9.1}%
-\contentsline {subsubsection}{\numberline {3.1.9.2}EJEMPLO DE EJECUCIÓN}{52}{subsubsection.3.1.9.2}%
-\contentsline {subsection}{\numberline {3.1.10}CRIBA DE ERATOSTENES}{52}{subsection.3.1.10}%
-\contentsline {subsubsection}{\numberline {3.1.10.1}IMPLEMENTACIÓN}{52}{subsubsection.3.1.10.1}%
-\contentsline {subsubsection}{\numberline {3.1.10.2}EJEMPLO NÚMERICO}{52}{subsubsection.3.1.10.2}%
-\contentsline {subsection}{\numberline {3.1.11}CRIBA CUADRATICA}{53}{subsection.3.1.11}%
-\contentsline {subsubsection}{\numberline {3.1.11.1}IMPLEMENTACIÓN}{53}{subsubsection.3.1.11.1}%
-\contentsline {subsubsection}{\numberline {3.1.11.2}EJEMPLO DE EJECUCIÓN}{61}{subsubsection.3.1.11.2}%
-\contentsline {chapter}{\numberline {4}EVALUACIÓN DE RESULTADOS}{62}{chapter.4}%
-\contentsline {section}{\numberline {4.1}GENERACIÓN DE CASOS DE PRUEBA}{62}{section.4.1}%
-\contentsline {section}{\numberline {4.2}RECOLECCIÓN DE DATOS}{63}{section.4.2}%
-\contentsline {section}{\numberline {4.3}RESULTADOS}{65}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}DIVISIONES SUCESIVAS}{65}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}MÉTODO DE DIFERENCIA DE CUADRADOS DE FERMAT}{68}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}ALGORITMO DE POLLARD RHO}{70}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}MÉTODO DE FACTORIZACIÓN CON CURVAS ELIPTICAS}{73}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}ALGORITMO DE FACTORIZACIÓN DE CRIBA CUADRÁTICA}{74}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}DEMOSTRACIÓN DE LA HIPÓTESIS}{76}{section.4.4}%
-\contentsline {chapter}{\numberline {5}CONCLUSIONES Y RECOMENDACIONES}{79}{chapter.5}%
-\contentsline {section}{\numberline {5.1}CONCLUSIONES}{79}{section.5.1}%
-\contentsline {section}{\numberline {5.2}RECOMENDACIONES}{79}{section.5.2}%
-\contentsline {chapter}{BIBLIOGRAFÍA}{80}{section.5.2}%
+\contentsline {chapter}{\numberline {3}MARCO APLICATIVO}{35}{chapter.3}%
+\contentsline {section}{\numberline {3.1}ALGORITMOS DE FACTORIZACIÓN}{35}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}ALGORITMO DE EUCLIDES}{35}{subsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.1}IMPLEMENTACIÓN}{35}{subsubsection.3.1.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.1.2}EJEMPLO NÚMERICO}{36}{subsubsection.3.1.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.1.3}EJEMPLO DE EJECUCIÓN}{36}{subsubsection.3.1.1.3}%
+\contentsline {subsection}{\numberline {3.1.2}ALGORITMO EXTENDIDO DE EUCLIDES}{36}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}IMPLEMENTACIÓN}{37}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}EJEMPLO NÚMERICO}{37}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}EJEMPLO DE EJECUCIÓN}{38}{subsubsection.3.1.2.3}%
+\contentsline {subsection}{\numberline {3.1.3}ALGORITMO DE EXPONENCIACIÓN MODULAR}{38}{subsection.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.1.3.1}IMPLEMENTACIÓN}{38}{subsubsection.3.1.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.3.2}EJEMPLO NÚMERICO}{39}{subsubsection.3.1.3.2}%
+\contentsline {subsubsection}{\numberline {3.1.3.3}EJEMPLO DE EJECUCIÓN}{39}{subsubsection.3.1.3.3}%
+\contentsline {subsection}{\numberline {3.1.4}ALGORITMO DE DIVISIONES SUCESIVAS}{40}{subsection.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.1.4.1}IMPLEMENTACIÓN}{40}{subsubsection.3.1.4.1}%
+\contentsline {subsubsection}{\numberline {3.1.4.2}EJEMPLO NÚMERICO}{41}{subsubsection.3.1.4.2}%
+\contentsline {subsubsection}{\numberline {3.1.4.3}EJEMPLO DE EJECUCIÓN}{41}{subsubsection.3.1.4.3}%
+\contentsline {subsection}{\numberline {3.1.5}MÉTODO DE DIFERENCIA DE CUADRADOS DE FERMAT}{41}{subsection.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.1.5.1}IMPLEMENTACIÓN}{41}{subsubsection.3.1.5.1}%
+\contentsline {subsubsection}{\numberline {3.1.5.2}EJEMPLO NÚMERICO}{42}{subsubsection.3.1.5.2}%
+\contentsline {subsubsection}{\numberline {3.1.5.3}EJEMPLO DE EJECUCIÓN}{44}{subsubsection.3.1.5.3}%
+\contentsline {subsection}{\numberline {3.1.6}ALGORITMO DE FACTORIZACIÓN EN UNA LINEA DE HART}{44}{subsection.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.1.6.1}IMPLEMENTACIÓN}{44}{subsubsection.3.1.6.1}%
+\contentsline {subsubsection}{\numberline {3.1.6.2}EJEMPLO NÚMERICO}{45}{subsubsection.3.1.6.2}%
+\contentsline {subsubsection}{\numberline {3.1.6.3}EJEMPLO DE EJECUCIÓN}{46}{subsubsection.3.1.6.3}%
+\contentsline {subsection}{\numberline {3.1.7}MÉTODO DE POLLARD RHO}{46}{subsection.3.1.7}%
+\contentsline {subsubsection}{\numberline {3.1.7.1}IMPLEMENTACIÓN}{46}{subsubsection.3.1.7.1}%
+\contentsline {subsubsection}{\numberline {3.1.7.2}EJEMPLO NÚMERICO}{47}{subsubsection.3.1.7.2}%
+\contentsline {subsubsection}{\numberline {3.1.7.3}EJEMPLO DE EJECUCIÓN}{49}{subsubsection.3.1.7.3}%
+\contentsline {subsection}{\numberline {3.1.8}ALGORITMO DE FACTORIZACIÓN DE ENTEROS DE FRACCIONES CONTINUAS}{49}{subsection.3.1.8}%
+\contentsline {subsubsection}{\numberline {3.1.8.1}IMPLEMENTACIÓN}{49}{subsubsection.3.1.8.1}%
+\contentsline {subsubsection}{\numberline {3.1.8.2}EJEMPLO DE EJECUCIÓN}{51}{subsubsection.3.1.8.2}%
+\contentsline {subsection}{\numberline {3.1.9}ALGORITMO DE FACTORIZACIÓN CON CURVAS ELÍPTICAS}{51}{subsection.3.1.9}%
+\contentsline {subsubsection}{\numberline {3.1.9.1}IMPLEMENTACIÓN}{51}{subsubsection.3.1.9.1}%
+\contentsline {subsubsection}{\numberline {3.1.9.2}EJEMPLO DE EJECUCIÓN}{53}{subsubsection.3.1.9.2}%
+\contentsline {subsection}{\numberline {3.1.10}CRIBA DE ERATOSTENES}{53}{subsection.3.1.10}%
+\contentsline {subsubsection}{\numberline {3.1.10.1}IMPLEMENTACIÓN}{53}{subsubsection.3.1.10.1}%
+\contentsline {subsubsection}{\numberline {3.1.10.2}EJEMPLO NÚMERICO}{53}{subsubsection.3.1.10.2}%
+\contentsline {subsection}{\numberline {3.1.11}CRIBA CUADRATICA}{54}{subsection.3.1.11}%
+\contentsline {subsubsection}{\numberline {3.1.11.1}IMPLEMENTACIÓN}{54}{subsubsection.3.1.11.1}%
+\contentsline {subsubsection}{\numberline {3.1.11.2}EJEMPLO DE EJECUCIÓN}{62}{subsubsection.3.1.11.2}%
+\contentsline {chapter}{\numberline {4}EVALUACIÓN DE RESULTADOS}{63}{chapter.4}%
+\contentsline {section}{\numberline {4.1}GENERACIÓN DE CASOS DE PRUEBA}{63}{section.4.1}%
+\contentsline {section}{\numberline {4.2}RECOLECCIÓN DE DATOS}{64}{section.4.2}%
+\contentsline {section}{\numberline {4.3}RESULTADOS}{66}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}DIVISIONES SUCESIVAS}{66}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}MÉTODO DE DIFERENCIA DE CUADRADOS DE FERMAT}{69}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}ALGORITMO DE POLLARD RHO}{71}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}MÉTODO DE FACTORIZACIÓN CON CURVAS ELIPTICAS}{74}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}ALGORITMO DE FACTORIZACIÓN DE CRIBA CUADRÁTICA}{75}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}DEMOSTRACIÓN DE LA HIPÓTESIS}{77}{section.4.4}%
+\contentsline {chapter}{\numberline {5}CONCLUSIONES Y RECOMENDACIONES}{80}{chapter.5}%
+\contentsline {section}{\numberline {5.1}CONCLUSIONES}{80}{section.5.1}%
+\contentsline {section}{\numberline {5.2}RECOMENDACIONES}{80}{section.5.2}%
+\contentsline {chapter}{BIBLIOGRAFÍA}{81}{section.5.2}%

@@ -2,21 +2,21 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Ejecución de prueba del algoritmo de Euclides\relax }}{35}{figure.caption.4}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Ejecución de prueba del algoritmo extendido de Euclides\relax }}{37}{figure.caption.5}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Ejecución de prueba del algoritmo de exponenciación modular\relax }}{38}{figure.caption.6}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Ejecución de prueba del algoritmo de factorización por divisiones sucesivas\relax }}{40}{figure.caption.7}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Ejecución de prueba del algoritmo de Fermat\relax }}{43}{figure.caption.8}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Ejecución de prueba del algoritmo de factorización en una linea de Hart\relax }}{45}{figure.caption.9}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Ejecución de prueba del algoritmo Pollard-Rho\relax }}{48}{figure.caption.10}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Ejecución de prueba del algoritmo de factorización con fracciones continuas\relax }}{50}{figure.caption.11}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Ejecución de prueba del algoritmo de factorización con curvas Elipticas (ECM)\relax }}{52}{figure.caption.12}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Resultado de la criba de Eratostenes\relax }}{53}{figure.caption.13}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Resultado de la criba de Cuadratica\relax }}{61}{figure.caption.14}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Ejecución de prueba del algoritmo de Euclides\relax }}{36}{figure.caption.6}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Ejecución de prueba del algoritmo extendido de Euclides\relax }}{38}{figure.caption.7}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Ejecución de prueba del algoritmo de exponenciación modular\relax }}{39}{figure.caption.8}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Ejecución de prueba del algoritmo de factorización por divisiones sucesivas\relax }}{41}{figure.caption.9}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Ejecución de prueba del algoritmo de Fermat\relax }}{44}{figure.caption.10}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Ejecución de prueba del algoritmo de factorización en una linea de Hart\relax }}{46}{figure.caption.11}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Ejecución de prueba del algoritmo Pollard-Rho\relax }}{49}{figure.caption.12}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Ejecución de prueba del algoritmo de factorización con fracciones continuas\relax }}{51}{figure.caption.13}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Ejecución de prueba del algoritmo de factorización con curvas Elipticas (ECM)\relax }}{53}{figure.caption.14}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Resultado de la criba de Eratostenes\relax }}{54}{figure.caption.15}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Resultado de la criba de Cuadratica\relax }}{62}{figure.caption.16}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {12}{\ignorespaces Resultados Algoritmo de Divisiones Sucesivas\relax }}{68}{figure.caption.21}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Resultados Método de diferencia de cuadrados de Fermat\relax }}{70}{figure.caption.24}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Resultados Algoritmo de Pollard Rho\relax }}{72}{figure.caption.28}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Resultados Método de Factorización con Curvas Elípticas con casos de prueba de la Tabla \ref {tabla:factores_pequeños}\relax }}{74}{figure.caption.30}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Resultados la Factorización con Criba Cuadrática\relax }}{76}{figure.caption.33}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Resultados Algoritmo de Divisiones Sucesivas\relax }}{69}{figure.caption.23}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Resultados Método de diferencia de cuadrados de Fermat\relax }}{71}{figure.caption.26}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Resultados Algoritmo de Pollard Rho\relax }}{73}{figure.caption.30}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Resultados Método de Factorización con Curvas Elípticas con casos de prueba de la Tabla \ref {tabla:factores_pequeños}\relax }}{75}{figure.caption.32}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Resultados la Factorización con Criba Cuadrática\relax }}{77}{figure.caption.35}%
 \addvspace {10\p@ }
